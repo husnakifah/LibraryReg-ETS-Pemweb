@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+    <title>LibraryReg – Pendaftaran Anggota Perpustakaan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav>
+      <a class="logo" href="#beranda">
+        <svg width="30" height="26" viewBox="0 0 30 26">
+          <path d="M1 3l12 3v18L1 21z" fill="#9aa4ff"></path>
+          <path d="M29 3L17 6v18l12-3z" fill="#4d8bff"></path>
+        </svg>
+        LIBRARYREG
+      </a>
+      <button id="burger" aria-label="Menu">☰</button>
+      <div class="links" id="links">
+        <a href="#beranda" data-r="beranda">Beranda</a>
+        <a href="#tentang" data-r="tentang">Tentang Perpustakaan</a>
+        <a href="#layanan" data-r="layanan">Layanan</a>
+        <a href="#anggota" data-r="anggota">Daftar Anggota</a>
+        <a href="#daftar" data-r="daftar">Pendaftaran Anggota</a>
+        <a href="#login" data-r="login" id="loginLink">Login Petugas</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- BERANDA / LANDING -->
+      <section class="view" id="v-beranda">
+        <h1 class="big">Read, Learn, Grow</h1>
+
+        <div class="grid" style="grid-template-columns:2fr 1fr">
+          <div
+            class="cell img"
+            style="background-image:url(images/hero.jpg)"
+            role="img"
+            aria-label="Ruang baca perpustakaan"
+          ></div>
+
+          <div class="cell">
+            <h2>Selamat datang di Perpustakaan Universitas</h2>
+            <div>
+              <p>
+                Akses ribuan koleksi buku, jurnal, e-book, dan sumber referensi
+                untuk mendukung proses belajar, penelitian, dan pengembangan diri.
+              </p>
+              <p style="margin-top:14px">
+                <a class="btn" href="#daftar">Daftar sekarang</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="cell">
+            <h2>Koleksi Lengkap</h2>
+            <p>
+              Untuk memenuhi kebutuhan pemustaka, kami melanggan berbagai bahan
+              perpustakaan digital online (e-Resources) seperti jurnal, e-book,
+              dan karya-karya referensi online lainnya. Setiap anggota memiliki
+              nomor anggota yang sah dan berhak memanfaatkan koleksi digital yang
+              kami langgan.
+            </p>
+          </div>
+          <div class="cell">
+            <h2>Akses untuk Semua</h2>
+            <p>
+              Layanan inklusif yang memastikan setiap individu—tanpa batasan
+              fisik, jarak, dan waktu—memiliki hak dan kemudahan yang sama untuk
+              mengakses seluruh dunia literasi secara bebas.
+            </p>
+          </div>
+          <div
+            class="cell img"
+            style="background-image:url(images/rak-buku.jpg)"
+            role="img"
+            aria-label="Rak buku"
+          ></div>
+          <div
+            class="cell img"
+            style="background-image:url(images/ruang-baca.jpg)"
+            role="img"
+            aria-label="Ruang belajar"
+          ></div>
+          <div class="cell">
+            <h2>Layanan Digital</h2>
+            <p>
+              Gerbang literasi modern yang menghubungkan Anda dengan ribuan
+              e-book, jurnal, dan karya ilmiah berkualitas secara daring, kapan
+              saja dan di mana saja.
+            </p>
+          </div>
+          <div class="cell">
+            <h2>Ruang Nyaman</h2>
+            <p>
+              Fasilitas fisik yang dirancang ramah, tenang, dan kolaboratif,
+              menciptakan atmosfer sempurna untuk membaca, berdiskusi, hingga
+              menemukan inspirasi baru.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="big">Bergabung dengan kita</h2>
+
+        <div class="join">
+          <div>
+            <div class="b">
+              <h2 style="font-size:1.8rem">Unlock your benefits</h2>
+            </div>
+            <div class="b">
+              <h3>Pinjam buku &amp; e-book</h3>
+              <p>Pinjam buku dan e-book dari 10.000++ sumber</p>
+            </div>
+            <div class="b">
+              <h3>Akses jurnal online</h3>
+              <p>Akses 1000+++ jurnal online GRATIS</p>
+            </div>
+            <div class="b">
+              <h3>Ruang belajar</h3>
+              <p>Booking ruangan nyaman untuk belajar</p>
+            </div>
+          </div>
+          <div
+            class="img"
+            style="background-image:url(images/pelatihan.jpg);background-size:cover;background-position:center"
+            role="img"
+            aria-label="Pelatihan di perpustakaan"
+          ></div>
+        </div>
+
+        <div class="cta">
+          <span>DAFTARKAN DIRIMU SEKARANG</span>
+          <h2><span id="cnt">0</span>+ Pendaftar</h2>
+          <a class="btn w" href="#daftar">Sign up here!</a>
+          <p style="margin:0;font-size:.85rem">
+            Koleksi ilustratif: 10.000+ buku &amp; e-book · 1.000+ jurnal ·
+            <span id="cm">0</span> anggota terdaftar di perangkat ini
+          </p>
+        </div>
+      </section>
+
+      <!-- TENTANG -->
+      <section class="view" id="v-tentang">
+        <div class="page">
+          <h1>Tentang Perpustakaan</h1>
+          <div class="card">
+            <p>
+              <b>LibraryReg</b> adalah aplikasi web pendaftaran anggota
+              perpustakaan perguruan tinggi yang menggantikan formulir kertas
+              dengan formulir digital, sehingga antrean berkurang, pencatatan
+              lebih akurat, dan data anggota mudah dicari.
+            </p>
+            <p>
+              Perpustakaan melayani mahasiswa, dosen, dan tenaga kependidikan
+              dengan koleksi cetak, e-book, serta jurnal online.
+            </p>
+          </div>
+
+          <div class="cols">
+            <div class="card">
+              <h3 style="font-size:1rem">Visi</h3>
+              <p>Menjadi pusat literasi yang inklusif dan modern.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem">Ruang lingkup</h3>
+              <p>Mahasiswa, dosen, dan staf.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem">Platform</h3>
+              <p>Web responsif (front end, data disimpan di localStorage).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAYANAN -->
+      <section class="view" id="v-layanan">
+        <div class="page">
+          <h1>Layanan</h1>
+          <div class="cols">
+            <div class="card">
+              <h3 style="font-size:1rem">Peminjaman Buku &amp; E-book</h3>
+              <p>Akses lebih dari 10.000 sumber koleksi.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem">Jurnal Online</h3>
+              <p>Lebih dari 1.000 jurnal online gratis untuk anggota.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem">Ruang Belajar</h3>
+              <p>Pemesanan ruang yang nyaman dan kolaboratif.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem">Pelatihan Literasi</h3>
+              <p>Pelatihan penelusuran informasi dan penggunaan e-resources.</p>
+            </div>
+          </div>
+          <p style="margin-top:24px">
+            <a class="btn" href="#daftar">Jadi anggota</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- DAFTAR ANGGOTA -->
+      <section class="view" id="v-anggota">
+        <div class="page">
+          <h1>Daftar Anggota</h1>
+          <div class="card">
+            <div class="bar">
+              <input
+                id="q"
+                type="search"
+                placeholder="Cari nama atau NIM/NIP…"
+                aria-label="Cari"
+              >
+              <span id="auth" class="tag"></span>
+            </div>
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIM/NIP</th>
+                    <th>Program Studi</th>
+                    <th>Jenis</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="tb"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PENDAFTARAN -->
+      <section class="view" id="v-daftar">
+        <div class="page">
+          <h1>Pendaftaran Anggota</h1>
+          <form class="card" id="rf" novalidate></form>
+        </div>
+      </section>
+
+      <!-- LOGIN -->
+      <section class="view" id="v-login">
+        <div class="page" style="max-width:460px">
+          <h1>Login Petugas</h1>
+          <form class="card" id="lf" novalidate>
+            <p style="margin-top:0;font-size:.85rem;color:var(--mut)">
+              Simulasi antarmuka. Gunakan <b>petugas</b> / <b>admin123</b>.
+            </p>
+            <label for="lu">Username</label>
+            <input id="lu" autocomplete="username">
+            <label for="lp">Password</label>
+            <input id="lp" type="password" autocomplete="current-password">
+            <div class="fe" id="le"></div>
+            <p><button class="btn" type="submit">Masuk</button></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo" style="font-size:1.8rem">LibraryReg</div>
+      <div class="fgrid">
+        <div>
+          <h4>Contact</h4>
+          Email: 5025251049@student.its.ac.id<br>
+          Phone: 085168630501
+        </div>
+        <div>
+          <h4>Opening Hours</h4>
+          <table>
+            <tr>
+              <td>MON – FRI</td>
+              <td>5:00 – 23:00</td>
+            </tr>
+            <tr>
+              <td>SATURDAYS</td>
+              <td>8:00 – 16:00</td>
+            </tr>
+            <tr>
+              <td>SUNDAYS</td>
+              <td>8:00 – 13:00</td>
+            </tr>
+            <tr>
+              <td>HOLIDAYS</td>
+              <td>8:00 – 16:00</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <a href="#beranda">Instagram</a><br>
+          <a href="#beranda">X</a><br>
+          <a href="#beranda">LinkedIn</a><br>
+          <a href="#beranda">Spotify</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog id="dlg"></dialog>
+    <div id="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
